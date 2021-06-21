@@ -31,7 +31,7 @@ setmodalVisibility(false)
 
     <Text style={styles.logo}>HYZERN</Text>
     <TouchableOpacity onPress={()=> pressHandler()} >
-    <Image source={require('../assets/images/profileavatar.png')}
+    <Image source={require('.src/assets/images/profileavatar.png')}
     style={styles.avatar}></Image>
     </TouchableOpacity>
     </View>
