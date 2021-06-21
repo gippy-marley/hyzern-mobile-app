@@ -13,12 +13,10 @@ setmodalVisibility(false)
       
   return(
     <View style={styles.container}>
-      <TouchableOpacity onPress={()=> modalClose()}>
-
       <Modal transparent 
       visible= {modalVisibility}
-      animationType= {'fade'}>
-        
+      animationType= {'fade'}
+      onRequestClose={()=>modalClose()}>        
         <View style={styles.modal}>
           <Text style={styles.modaltext}>Profile</Text>
           <Text style={styles.modaltext}>My account</Text>
@@ -27,11 +25,9 @@ setmodalVisibility(false)
           </TouchableOpacity>
         </View>
       </Modal>
-      </TouchableOpacity>
-
     <Text style={styles.logo}>HYZERN</Text>
     <TouchableOpacity onPress={()=> pressHandler()} >
-    <Image source={require('.src/assets/images/profileavatar.png')}
+    <Image source={require('../assets/images/profileavatar.png')}
     style={styles.avatar}></Image>
     </TouchableOpacity>
     </View>

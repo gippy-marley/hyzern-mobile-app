@@ -4,10 +4,12 @@ import {TouchableOpacity, View, Text, StyleSheet, Image} from 'react-native';
 const Main = (props) =>{
   const {cont} = props;
   return(
-    <View style={styles.container}>   
+    <View style={styles.container}> 
+   
       {cont.map((x)=>{   
         return(
         <View key={x.id}>    
+         <TouchableOpacity>  
         <View style={styles.flex}>
         <Image style={styles.imagefor} source={x.imagefor}></Image>
         <Image style={styles.imagefor} source={x.imageagainst}></Image>
@@ -24,8 +26,10 @@ const Main = (props) =>{
           </View>        
         <Text style={styles.textsmall}>{x.name} - {x.views}</Text>
         </View>      
+        </TouchableOpacity>
         </View> ) 
       })}
+      
     </View>
   )
 }
