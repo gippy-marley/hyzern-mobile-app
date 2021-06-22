@@ -2,14 +2,14 @@ import React from 'react';
 import {TouchableOpacity, View, Text, StyleSheet, Image} from 'react-native';
 
 const Main = (props) =>{
-  const {cont} = props;
+  const {cont, navigation } = props;
   return(
     <View style={styles.container}> 
    
       {cont.map((x)=>{   
         return(
         <View key={x.id}>    
-         <TouchableOpacity>  
+         <TouchableOpacity onPress={()=> navigation.navigate('Room')}>  
         <View style={styles.flex}>
         <Image style={styles.imagefor} source={x.imagefor}></Image>
         <Image style={styles.imagefor} source={x.imageagainst}></Image>
@@ -51,7 +51,7 @@ const styles= StyleSheet.create({
   },
   text:{
     fontSize: 15,
-    color: 'white'
+    color: 'white',
   },
   textsmall:{
     fontSize: 10,

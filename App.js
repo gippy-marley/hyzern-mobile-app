@@ -1,22 +1,25 @@
-// import 'react-native-gesture-handler';
+import 'react-native-gesture-handler';
 import React from 'react';
 import {View, ScrollView, Text, StyleSheet} from 'react-native';
-import Header from './src/components/Header';
-import Start from './src/components/Start';
-import Main from './src/components/Main';
-import data from './data'; 
-// import { NavigationContainer } from '@react-navigation/native';
+import Home from './src/screens/Home'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Room from './src/screens/Room';
 
+const Stack = createStackNavigator();
 const App = () =>{
-   const {cont} = data;
+  
   return(
-    // <NavigationContainer>
-    <View style={{flex:1}}>
-      <View><Header></Header></View>
-      <ScrollView><Main cont = {cont} ></Main></ScrollView>
-      <View style={styles.tag}><Start></Start></View>    
-    </View>
-    // </NavigationContainer>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Room" component={Room} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // <View style={{flex: 1}}>
+    //   <Home></Home>
+    //   <Room></Room>
+    // </View>
   )  
 }
 

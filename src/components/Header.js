@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Modal, View, Text, StyleSheet, TouchableOpacity, Image, TouchableWithoutFeedback} from 'react-native';
+import {Modal, View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const Header = () =>{
   const [modalVisibility,setmodalVisibility] = useState(false)
